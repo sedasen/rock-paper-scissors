@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+body {
+    font-family: 'Indie Flower', cursive;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("img/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+#plant {
+    position: absolute;
+    top: 0px; 
+    left: 0px;
+    width: 20%;
+}
+
+#note {
+    position: absolute;
+    top: 20px; 
+    right: 20px;
+    width: 15%;
+}
+
+#coffeekie {
+    position: absolute;
+    bottom: 0px; 
+    left: 0px;
+    width: fit-content;
+    display: flex;
+    align-items: flex-end;
+}
+
+#coffeekie > img:first-child {
+    width: 30vw;
+}
+
+#coffeekie > img:nth-child(2) {
+    width: 20vw;
+}
+
+#pen {
+    position: absolute;
+    bottom: 80px; 
+    right: 40px;
+    width: 15%;
+}
+

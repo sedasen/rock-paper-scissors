@@ -1,8 +1,12 @@
-let hands = ["rock", "paper", "scissor"]
+import {Graph, Vertex} from "./graph.js"
 
-function getHand() {
- let randomIndex = Math.floor(Math.random() * 3)
-  return hands[randomIndex]
-}
+let scissorsVertex = new Vertex("scissors")
+let paperVertex = new Vertex("paper")
+let rockVertex = new Vertex("rock")
 
-console.log(getHand())
+let winTable = new Graph()
+winTable.createEdge(scissorsVertex, paperVertex)
+winTable.createEdge(paperVertex, rockVertex)
+winTable.createEdge(rockVertex, scissorsVertex)
+
+console.log("Taş, makası yener mi?" + winTable.hasEdge(rockVertex, scissorsVertex))

@@ -11,6 +11,8 @@ body {
     margin: 0;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
 }
 
 #plant {
@@ -106,17 +108,32 @@ button:active {
     }
 }
 
-#selectedImg {
-    animation: enterImg 0.5s cubic-bezier(.56,.96,.64,.98);
+#playerImg {
+    animation: enterPlayerImg 0.5s cubic-bezier(.56,.96,.64,.98);
     z-index: 1;
 }
 
-@keyframes enterImg {
+@keyframes enterPlayerImg {
     from {
         transform: translateX(-100%);
     } 
     to {
         transform: translateX(0%);
+    }
+}
+
+#cpuImg {
+    transform: scaleX(-1);
+    animation: enterCpuImg 0.5s cubic-bezier(.56,.96,.64,.98);
+    z-index: 1;
+}
+
+@keyframes enterCpuImg {
+    from {
+        transform: translateX(100%) scaleX(-1);
+    } 
+    to {
+        transform: translateX(0%) scaleX(-1);
     }
 }
 

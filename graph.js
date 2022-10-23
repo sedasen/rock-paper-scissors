@@ -24,6 +24,13 @@ export class Graph {
 
     createEdge(vertex1, vertex2) {
         vertex1.addEdge(vertex2)
+        if (!this.verticies.includes(vertex1)) {
+            this.addVertex(vertex1)
+        }
+        
+        if (!this.verticies.includes(vertex2)) {
+            this.addVertex(vertex2)
+        }
     }
 
     hasEdge(vertex1, vertex2) {

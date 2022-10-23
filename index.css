@@ -46,7 +46,17 @@ body {
     position: absolute;
     bottom: 60px; 
     right: 40px;
-    width: 10%;
+    width: 15%;
+}
+
+#menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 60px;
 }
 
 button {
@@ -71,19 +81,25 @@ button:active {
 }
 
 #selections {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateY(-50%) translateX(-50%) translateX(-100px);
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 }
 
 #question-mark {
-    position: absolute;
-    right: 50%;
-    top: 50%;
-    transform: translateY(-50%) translateX(50%) translateX(120px) rotate(15deg);
+    animation: shuffle 1s linear infinite alternate-reverse;
 }
 
+@keyframes shuffle {
+    0% {
+        transform: rotate(15deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-15deg);
+    }
+}

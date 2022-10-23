@@ -18,13 +18,19 @@
 
     <div id="menu">
         <div id="selections">
-            <button>Rock</button>
-            <button>Paper</button>
-            <button>Scissors</button>
+            <button id="btn-rock">Rock</button>
+            <button id="btn-paper">Paper</button>
+            <button id="btn-scissors">Scissors</button>
         </div>
         <img src="assets/vs.png" id="vs">
         <img src="assets/question-mark.svg" id="question-mark">
     </div>
+
+    <div id="resultMenu" style="display: none;">
+        <p id="result">Winner :)</p>
+        <button id="btn-again">Try Again?</button>
+    </div>
+    
     <script src="graph.js" type="module"></script>
     <script src="index.js" type="module"></script>
 </body>

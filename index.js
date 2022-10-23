@@ -12,12 +12,23 @@ winTable.createEdge(rockVertex, scissorsVertex)
 const btnRock = document.getElementById("btn-rock")
 const btnPaper = document.getElementById("btn-paper")
 const btnScissors = document.getElementById("btn-scissors")
+const btnAgain = document.getElementById("btn-again")
 
 btnRock.addEventListener("click", () => onPlayerSelect(rockVertex))
 btnPaper.addEventListener("click", () => onPlayerSelect(paperVertex))
 btnScissors.addEventListener("click", () => onPlayerSelect(scissorsVertex))
+btnAgain.addEventListener("click", resetGame)
 
-console.log(winTable.verticies)
+function resetGame() {
+    let menu = document.getElementById("menu")
+    menu.style.visibility = "visible"
+
+    let resultMenu = document.getElementById("resultMenu")
+    resultMenu.style.visibility = "hidden"
+
+    document.getElementById("cpuImg").remove();
+    document.getElementById("playerImg").remove();
+}
 
 function generateSelection() {
     const randomIndex = Math.floor(Math.random() * winTable.verticies.length)
@@ -26,9 +37,7 @@ function generateSelection() {
 
 function onPlayerSelect(playerChoice) {
     const playerImg = document.getElementById("playerImg")
-
     const cpuChoice = generateSelection()
-    console.log(cpuChoice)
 
     if (playerImg != null) {
         playerImg.remove()
@@ -45,10 +54,10 @@ function onPlayerSelect(playerChoice) {
     document.body.appendChild(newCpuImg)
 
     let menu = document.getElementById("menu")
-    menu.style.display = "none"
+    menu.style.visibility = "hidden"
 
     let resultMenu = document.getElementById("resultMenu")
-    resultMenu.style.display = "flex"
+    resultMenu.style.visibility = "visible"
 
     let result = document.getElementById("result")
 

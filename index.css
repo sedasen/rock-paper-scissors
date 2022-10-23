@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
 body {
     font-family: 'Indie Flower', cursive;
     width: 100vw;
     height: 100vh;
-    background-image: url("img/background.png");
+    background-image: url("assets/background.png");
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0;
@@ -21,7 +22,7 @@ body {
     position: absolute;
     top: 20px; 
     right: 20px;
-    width: 15%;
+    width: 13%;
 }
 
 #coffeekie {
@@ -34,17 +35,55 @@ body {
 }
 
 #coffeekie > img:first-child {
-    width: 30vw;
+    width: 25vw;
 }
 
 #coffeekie > img:nth-child(2) {
-    width: 15vw;
+    width: 10vw;
 }
 
 #pen {
     position: absolute;
     bottom: 60px; 
     right: 40px;
-    width: 15%;
+    width: 10%;
+}
+
+button {
+    font-family: 'Merriweather', cursive;
+    font-weight: 400;
+    background-color: #EAD9E8;
+    font-size: 18px;
+    width: 120px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    box-sizing: content-box;
+}
+
+button:hover {
+    background-color: #E0C5DD;
+    cursor: pointer;
+}
+
+button:active {
+    outline: 3px solid #735C70;
+}
+
+#selections {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%) translateX(-100px);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#question-mark {
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(50%) translateX(120px) rotate(15deg);
 }
 

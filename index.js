@@ -10,5 +10,3 @@ winTable.createEdge(paperVertex, rockVertex)
 winTable.createEdge(rockVertex, scissorsVertex)
 
 console.log("Taş, makası yener mi?" + winTable.hasEdge(rockVertex, scissorsVertex))
-
-a
